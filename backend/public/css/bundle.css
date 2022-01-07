@@ -146,7 +146,7 @@ a{
     color: white;
     padding: 10px 15px;
     margin-left: 87%;
-    bottom: 50px;
+    bottom: 70px;
 }
 
 .timeline-content .btn-edit{
@@ -157,6 +157,20 @@ a{
     border: 2px solid white;
     color: white;
     padding: 5px 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timeline-content .btn-view{
+    position: relative;
+    width: 70px;
+    display: block;
+    background-color: #5f41f4;
+    border-radius: 30px;
+    border: 2px solid white;
+    color: white;
+    padding: 5px 15px;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -203,6 +217,11 @@ a{
 .img-separator{
     height: 10px;
     background-image: url("https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif");
+}
+
+/* --------------- View Tasks -------------------- */
+.view-task{
+    background-color: red;
 }
 
 

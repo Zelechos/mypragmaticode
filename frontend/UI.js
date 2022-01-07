@@ -9,6 +9,7 @@ class UI {
     // para mostrar los datos
     async renderBooks() {
         const books = await bookService.getBook();
+        
         const form = document.getElementById("form");
         if (books.length === 0) {
             form.style.display = "none";
@@ -27,7 +28,6 @@ class UI {
             <!--Contenido de linea de tiempo-->
                 <div class="timeline-content">
                     <a href="#" class="btn-edit" _id="${element._id}">Edit</a>
-                    
                     <a href="#" class="btn-delete" _id="${element._id}">X</a>
                     
                     <a href="./code.html" target="_blank">
@@ -35,12 +35,10 @@ class UI {
                         <div class="img-separator"></div><br>
             
                         <h3 class="solution">${element.subtitle}</h3>
-                        <img src="${
-                            element.imagePath
-                        }" alt="" class="img-timiline">
-                        <p>
-                        ${element.description}
-                        </p>
+                            <img src="${element.imagePath}" alt="" class="img-timiline">
+                            <p>
+                            ${element.description}
+                            </p>
 
                         <div class="img-separator"></div>
 
@@ -49,6 +47,9 @@ class UI {
                     </a>
                 </div>
             `;
+            li.id = element._id;
+            li.className = "tasks";
+
             booksData.appendChild(li);
         });
     }
@@ -77,6 +78,7 @@ class UI {
         document.getElementById("save-update").innerHTML = "Update";
         document.getElementById("image").style.display = "none";
     }
+
 
     // devuelve la cantidad de datos
     async lengthBooks(){
@@ -112,6 +114,8 @@ class UI {
         this.clearBookForm();
         this.renderBooks();
     }
+
+    
 }
 
 export default UI;

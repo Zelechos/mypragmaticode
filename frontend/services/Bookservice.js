@@ -58,7 +58,7 @@ class Bookservice {
     }
 
     // peticion asincrona GET tarea unica
-    async getBookUnique(Id, book) {
+    async getBookUnique(Id) {
         const response = await fetch(`${this.URI}/${Id}`);
 
         //convertimos nuestra respuesta a json para manipular los datos
